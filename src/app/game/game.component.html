@@ -1,0 +1,14 @@
+<h1 id="header">Wordle</h1>
+<form [formGroup]="wordForm">
+    <table class="wordle-table">
+        <tr *ngFor="let attemptForm of attempts.controls; let i = index">
+            <td>
+                <input  type="text"
+                        class="wordle-attempt"
+                        name="attempt-{{i}}"
+                        id="attempt-{{i+1}}"
+                        placeholder="Enter a word">
+            </td>
+        </tr>
+    </table>
+</form>
